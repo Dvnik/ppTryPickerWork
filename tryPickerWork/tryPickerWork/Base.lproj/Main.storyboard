@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uF2-h8-6N4">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DocPicker-->
+        <scene sceneID="3i7-wy-ege">
+            <objects>
+                <viewController id="SB7-Lh-Pyk" customClass="PickerDocViewController" customModule="tryPickerWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZk-Zl-Gho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFg-Ii-ChK">
+                                <rect key="frame" x="139.5" y="30" width="96" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="TryPicker"/>
+                                <connections>
+                                    <action selector="doSystemPicker:" destination="SB7-Lh-Pyk" eventType="touchUpInside" id="gRQ-K9-gO1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EF-mH-mmn">
+                                <rect key="frame" x="10" y="81" width="355" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-6d-yeQ">
+                                <rect key="frame" x="10" y="111.5" width="355" height="501.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-4l-luv">
+                                <rect key="frame" x="5" y="10" width="109" height="32"/>
+                                <segments>
+                                    <segment title="JSON"/>
+                                    <segment title="TXT"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NPO-ER-WSg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NPO-ER-WSg" firstAttribute="trailing" secondItem="Pl3-6d-yeQ" secondAttribute="trailing" constant="10" id="Jcx-l9-8ju"/>
+                            <constraint firstItem="9EF-mH-mmn" firstAttribute="top" secondItem="CFg-Ii-ChK" secondAttribute="bottom" constant="10" id="LOr-ZN-nR4"/>
+                            <constraint firstItem="Pl3-6d-yeQ" firstAttribute="leading" secondItem="NPO-ER-WSg" secondAttribute="leading" constant="10" id="QAp-Mh-q7H"/>
+                            <constraint firstItem="NPO-ER-WSg" firstAttribute="trailing" secondItem="9EF-mH-mmn" secondAttribute="trailing" constant="10" id="VvH-t9-pkT"/>
+                            <constraint firstItem="CFg-Ii-ChK" firstAttribute="centerX" secondItem="lZk-Zl-Gho" secondAttribute="centerX" id="fyI-8u-X1C"/>
+                            <constraint firstItem="NPO-ER-WSg" firstAttribute="bottom" secondItem="Pl3-6d-yeQ" secondAttribute="bottom" constant="5" id="jU8-yo-XQT"/>
+                            <constraint firstItem="Pl3-6d-yeQ" firstAttribute="top" secondItem="9EF-mH-mmn" secondAttribute="bottom" constant="5" id="lcM-YI-z25"/>
+                            <constraint firstItem="aDB-4l-luv" firstAttribute="top" secondItem="NPO-ER-WSg" secondAttribute="top" constant="10" id="rMD-OQ-Ld5"/>
+                            <constraint firstItem="CFg-Ii-ChK" firstAttribute="top" secondItem="NPO-ER-WSg" secondAttribute="top" constant="30" id="wvI-tf-gED"/>
+                            <constraint firstItem="aDB-4l-luv" firstAttribute="leading" secondItem="NPO-ER-WSg" secondAttribute="leading" constant="5" id="ysw-df-vV8"/>
+                            <constraint firstItem="9EF-mH-mmn" firstAttribute="leading" secondItem="NPO-ER-WSg" secondAttribute="leading" constant="10" id="zco-Ku-hqw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="DocPicker" image="doc.text" catalog="system" id="mm7-MW-xpU"/>
+                    <connections>
+                        <outlet property="docSeg" destination="aDB-4l-luv" id="U58-uw-IgW"/>
+                        <outlet property="fileUrl" destination="9EF-mH-mmn" id="Md7-zy-wgg"/>
+                        <outlet property="picShow" destination="Pl3-6d-yeQ" id="UQW-hL-7IH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ea2-gZ-tLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887.2" y="457.42128935532236"/>
+        </scene>
+        <!--ImgPicker-->
+        <scene sceneID="bmE-ac-bjM">
+            <objects>
+                <viewController id="cmp-Kz-8IP" customClass="PickerImgViewController" customModule="tryPickerWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3b9-Eu-d9d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOF-5C-DHo">
+                                <rect key="frame" x="139.5" y="30" width="96" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="TryPicker"/>
+                                <connections>
+                                    <action selector="doSystemPicker:" destination="cmp-Kz-8IP" eventType="touchUpInside" id="xhy-pR-j7G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTu-gB-P99">
+                                <rect key="frame" x="10" y="81" width="355" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIW-kt-5pU">
+                                <rect key="frame" x="10" y="111.5" width="355" height="501.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RkW-1f-5Hd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIW-kt-5pU" firstAttribute="leading" secondItem="RkW-1f-5Hd" secondAttribute="leading" constant="10" id="4wB-Qz-5dF"/>
+                            <constraint firstItem="RkW-1f-5Hd" firstAttribute="bottom" secondItem="YIW-kt-5pU" secondAttribute="bottom" constant="5" id="8Wh-B9-HPQ"/>
+                            <constraint firstItem="YIW-kt-5pU" firstAttribute="top" secondItem="JTu-gB-P99" secondAttribute="bottom" constant="5" id="A4y-gS-aSl"/>
+                            <constraint firstItem="RkW-1f-5Hd" firstAttribute="trailing" secondItem="YIW-kt-5pU" secondAttribute="trailing" constant="10" id="Ayb-O9-4el"/>
+                            <constraint firstItem="JTu-gB-P99" firstAttribute="leading" secondItem="RkW-1f-5Hd" secondAttribute="leading" constant="10" id="IvV-dQ-52h"/>
+                            <constraint firstItem="WOF-5C-DHo" firstAttribute="top" secondItem="RkW-1f-5Hd" secondAttribute="top" constant="30" id="RCd-ce-dQ8"/>
+                            <constraint firstItem="RkW-1f-5Hd" firstAttribute="trailing" secondItem="JTu-gB-P99" secondAttribute="trailing" constant="10" id="vBm-lo-EUY"/>
+                            <constraint firstItem="WOF-5C-DHo" firstAttribute="centerX" secondItem="3b9-Eu-d9d" secondAttribute="centerX" id="ypM-Z7-dbN"/>
+                            <constraint firstItem="JTu-gB-P99" firstAttribute="top" secondItem="WOF-5C-DHo" secondAttribute="bottom" constant="10" id="ziH-XE-ghd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ImgPicker" image="squareshape.dashed.squareshape" catalog="system" id="K6Q-e1-rhW"/>
+                    <connections>
+                        <outlet property="fileUrl" destination="JTu-gB-P99" id="882-k6-1Oq"/>
+                        <outlet property="picShow" destination="YIW-kt-5pU" id="mMS-Q4-Zog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdj-XC-fsh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887.2" y="-231.63418290854574"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="scA-Oc-zmu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uF2-h8-6N4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="acV-hC-nVV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cmp-Kz-8IP" kind="relationship" relationship="viewControllers" id="rfS-8J-h7O"/>
+                        <segue destination="SB7-Lh-Pyk" kind="relationship" relationship="viewControllers" id="d2i-HI-0QF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzr-fq-Y3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="squareshape.dashed.squareshape" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
